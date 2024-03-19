@@ -1,0 +1,246 @@
+/* ------------ Defaults ------------ */
+
+html {
+    scroll-behavior: smooth;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ------------ Nav Styles ------------ */
+
+nav {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    clear: both;
+    background-color: black;
+    color: white;
+}
+
+html, body
+{
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+    display: inline-block;
+    padding: 4px 8px;
+}
+nav a:link,
+nav a:active,
+nav a:visited {
+    color: #f68c43;
+    text-decoration: none;
+}
+nav a:hover {
+    color: #f9b88c;
+    text-decoration: none;
+}
+
+#nav-left {
+    flex: 50%;
+    text-align: left;
+    font-size: 35px;
+    padding-top: .625rem;
+}
+
+#nav-right {
+    text-align: right;
+}
+
+#menu {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+#menu-toggle {
+    display: none;
+    border: none;
+}
+
+#menu.active {
+    display: block;
+}
+
+/* ------------ Header ------------ */
+
+.header-box {
+    background-image: url(../images/annie-spratt-FSFfEQkd1sc-unsplash-darker.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.centered {
+    font-size: 3.125rem;
+    color: white;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    transform: translate (-50%, -50%);
+}
+
+.centered2 {
+    font-size: 1.875rem;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    height: fill;
+}
+
+/* ------------ Designs Section ------------ */
+
+.headerh2 {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+#design-section {
+    max-width: 100%; 
+    margin: 0 auto; 
+    overflow-x: auto; 
+    white-space: nowrap; 
+    text-align: center; 
+}
+
+#designs {
+    display: inline-grid; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px 0; 
+}
+
+#designs div {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+#designs div:hover {
+    background-color: #e0e0e0;
+}
+
+.designs img {
+    max-width: 90%;
+}
+
+/* ------------ Details Page ------------ */
+
+.main-image {
+    display: block;
+    margin: 0 auto; 
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+.entry-name {
+    text-align: center;
+}
+
+.entry-description {
+    text-align: center;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.entry-project-aspects {
+    text-align: center;
+}
+
+.entry-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px; 
+    text-decoration: none;
+    color: blue; 
+}
+
+.entry-link:hover {
+    color: darkblue;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    max-height: 40rem;
+    padding: 8rem;
+}
+
+@media screen and (max-width: 48em) {
+
+    #menu-toggle {
+        display: block;
+        color: rgb(255, 154, 3);
+        padding: .75rem;
+        background-color: transparent;
+    }
+ 
+    #menu {
+        background-color: white;
+        display: none;
+        flex-direction: column;
+        padding: 10px;
+        position: absolute; /* Add this line */
+        top: 50px; /* Adjust the top position */
+        right: 20px; /* Adjust the right position */
+    }
+
+    nav {
+        height: auto;
+    }
+
+    .centered {
+        font-size: 2rem;
+    }
+
+    .centered2 {
+        font-size: 1.5rem;
+    }
+
+    .main-image {
+        display: block;
+        margin: 0 auto; /* Center horizontally */
+        max-width: 90%; /* Adjust max-width as needed */
+        max-height: 100%;
+    }
+}
+
+
+/* ------- Phone Size ------- */
+
+@media screen and (max-width: 30em) {
+
+    .centered {
+        font-size: 2rem;
+    }
+
+    .centered2 {
+        font-size: 1rem;
+    }
+
+    #designs {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .gallery img {
+        max-width: 20rem;
+        padding: 2rem 5rem;
+    }
+
+}
+
